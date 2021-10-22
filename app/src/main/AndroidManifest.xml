@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GlossaryApp">
         <activity
+            android:name=".ShopActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ItemDescriptionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ItemsActivity"
+            android:exported="true" />
+        <activity
             android:name=".HomePageActivity"
             android:exported="true" />
         <activity
