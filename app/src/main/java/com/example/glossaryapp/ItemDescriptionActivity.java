@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ItemDescriptionActivity extends AppCompatActivity {
@@ -16,6 +18,7 @@ public class ItemDescriptionActivity extends AppCompatActivity {
         TextView name = findViewById(R.id.itemName);
         TextView price = findViewById(R.id.itemPrice);
         Intent intent = getIntent();
+        Button buy = findViewById(R.id.shopBtn);
         String receivedItems = intent.getStringExtra("itemName");
         if(receivedItems.equals("LapTops")) {
         Laptops samsung = new Laptops("samsung laptop", "spectre", 28000);
@@ -36,5 +39,12 @@ public class ItemDescriptionActivity extends AppCompatActivity {
         }else{
             System.out.println("error");
         }
+        buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ItemDescriptionActivity.this, ShopActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
