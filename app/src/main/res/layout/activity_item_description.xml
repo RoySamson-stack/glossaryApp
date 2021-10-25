@@ -15,11 +15,10 @@
         tools:srcCompat="@drawable/gameconsoles" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/itemName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="20dp"
-        android:text="Game Consoles"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -31,10 +30,9 @@
         android:text="Catergory: Game Consoles" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/itemPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Price: 50, 000"
         android:textSize="20sp"
         android:textStyle="bold" />
 

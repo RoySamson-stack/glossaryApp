@@ -1,11 +1,11 @@
 package com.example.glossaryapp;
 
-public class GameConsole {
+public class Laptops {
     String name;
-    int model;
+    String model;
     int price;
 
-    public GameConsole(String name, int model, int price) {
+    public Laptops(String name, String model, int price) {
         this.name = name;
         this.model = model;
         this.price = price;
@@ -19,11 +19,11 @@ public class GameConsole {
         this.name = name;
     }
 
-    public int getModel() {
+    public String getModel() {
         return model;
     }
 
-    public void setModel(int model) {
+    public void setModel(String model) {
         this.model = model;
     }
 
