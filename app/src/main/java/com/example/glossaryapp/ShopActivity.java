@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class ShopActivity extends AppCompatActivity {
 
@@ -12,7 +13,10 @@ public class ShopActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
         Intent intent = getIntent();
-        String product = intent.getStringExtra("");
+        TextView produce = findViewById(R.id.product);
+        String product = intent.getStringExtra("product");
+
+        produce.setText(product);
 
     }
 }
