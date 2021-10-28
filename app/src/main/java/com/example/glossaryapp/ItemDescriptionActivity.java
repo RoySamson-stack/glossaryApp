@@ -20,6 +20,7 @@ public class ItemDescriptionActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Button buy = findViewById(R.id.shopBtn);
         String receivedItems = intent.getStringExtra("itemName");
+        
         if(receivedItems.equals("LapTops")) {
         Laptops samsung = new Laptops("samsung laptop", "spectre", 28000);
         name.setText(samsung.getName());
@@ -43,8 +44,11 @@ public class ItemDescriptionActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String product = name.getText().toString();
+                String amount = price.getText().toString();
+
                 Intent intent = new Intent(ItemDescriptionActivity.this, ShopActivity.class);
                 intent.putExtra("product", product);
+                intent.putExtra("price" , amount);
                 startActivity(intent);
             }
         });
